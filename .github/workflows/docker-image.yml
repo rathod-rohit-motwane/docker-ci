@@ -1,4 +1,4 @@
-name: Build and Push Public Image
+name: Build and Push to GHCR
 
 on: [push]
 
@@ -7,18 +7,22 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: write  # Still needed to push
+      packages: write  # Critical for GHCR access
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Build Docker image
-        run: docker build -t ghcr.io/${{ github.repository_owner }}/my-image:latest .
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}  # Automatically available
 
-      - name: Push to GHCR (public)
+      - name: Build and push
         uses: docker/build-push-action@v5
         with:
+          context: .
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/my-image:latest
-          # No need for login since GITHUB_TOKEN is automatically used
