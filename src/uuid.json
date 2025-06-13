@@ -1,0 +1,28 @@
+{
+
+	"00:00:00:00:00:00": {
+
+		"mode": 0,
+
+		"SensorID:0": [
+
+			"TESTING-1-TX-9",
+
+			"TESTING-1"
+		],
+
+		"solution_name": "T",
+
+		"key_lat": 139,
+
+		"key_long": 140,
+
+		"key_time_diff":141,
+
+		"lat": 16.1852,
+
+		"long": 77.3401
+
+
+	}
+}

@@ -1,0 +1,751 @@
+slaves:
+  - communication:
+      port: '/dev/ttyAMA1'
+      baudrate: 9600
+      parity: 'N'
+      stopbits: 1
+    sensors:
+      - id: 0
+        slave_address: 5
+        registers:
+          - address: 109
+            name: 59
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T' 
+          - address: 111
+            name: 60
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T' 
+          - address: 113
+            name: 61
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T' 
+          - address: 101
+            name: 62
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T' 
+          - address: 103
+            name: 63
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T' 
+          - address: 105
+            name: 64
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T' 
+          - address: 115
+            name: 65
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 117
+            name: 66
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 119
+            name: 67
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 143
+            name: 68
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 143
+            name: 69
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 145
+            name: 70
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 147
+            name: 71
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 151
+            name: 72
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 153
+            name: 73
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 155
+            name: 74
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 159
+            name: 75
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 161
+            name: 76
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 163
+            name: 77
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 149
+            name: 78
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 157
+            name: 79
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 165
+            name: 80
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 135
+            name: 81
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 137
+            name: 82
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 139
+            name: 83
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 141
+            name: 85
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 141
+            name: 86
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 221
+            name: 87
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 227
+            name: 88
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 179
+            name: 89
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 181
+            name: 90
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 183
+            name: 91
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 185
+            name: 92
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 187
+            name: 93
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 187
+            name: 94
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 303
+            name: 97
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 301
+            name: 98
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 231
+            name: 155
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 233
+            name: 184
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 221
+            name: 185
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 219
+            name: 186
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 109
+            name: 7
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 111
+            name: 8
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 113
+            name: 9
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 101
+            name: 10
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 103
+            name: 11
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 105
+            name: 12
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 115
+            name: 22
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 117
+            name: 23
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 119
+            name: 24
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 135
+            name: 152
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 137
+            name: 153
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 139
+            name: 154
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 149
+            name: 166
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 165
+            name: 167
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 157
+            name: 168
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 141
+            name: 172
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 221
+            name: 173
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 227
+            name: 174
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 141
+            name: 178
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 201
+            name: 187
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 229
+            name: 188
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 231
+            name: 189
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 109
+            name: 13
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 111
+            name: 14
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 113
+            name: 15
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 101
+            name: 16
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 103
+            name: 17
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 105
+            name: 18
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 115
+            name: 25
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 117
+            name: 26
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 119
+            name: 27
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 135
+            name: 162
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 137
+            name: 163
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 139
+            name: 164
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 149
+            name: 169
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 165
+            name: 170
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 157
+            name: 171
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 141
+            name: 175
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 221
+            name: 176
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 227
+            name: 177
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 141
+            name: 179
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 201
+            name: 190
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 221
+            name: 191
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 217
+            name: 192
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+      - id: 0
+        slave_address: 20
+        registers:         
+          - address: 0 
+            name: 99
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 2
+            name: 101
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 4
+            name: 103
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 6
+            name: 102
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 0
+            name: 111
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+          - address: 0
+            name: 112
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+          - address: 0
+            name: 113
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+          - address: 0
+            name: 114
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+          - address: 0
+            name: 115
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+          - address: 0
+            name: 116
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+      - id: 0
+        slave_address: 21
+        registers:         
+          - address: 0 
+            name: 100
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 2
+            name: 104
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 4
+            name: 105
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 6
+            name: 106
+            bytes: 2   
+            function_code: 3
+            endian: 3
+            data_type: 3
+            solution: 'T'
+          - address: 0
+            name: 117
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+          - address: 0
+            name: 118
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+          - address: 0
+            name: 119
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+          - address: 0
+            name: 120
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+          - address: 0
+            name: 121
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'
+          - address: 0
+            name: 122
+            bytes: 1   
+            function_code: 1
+            endian: 3
+            data_type: 5
+            solution: 'T'               
