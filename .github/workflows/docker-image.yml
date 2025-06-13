@@ -9,7 +9,7 @@ env:
 jobs:
   build-docker-image:
     name: Build Docker Image
-    runs-on: ubuntu-latest
+    runs-on:  debian:bullseye-20250520-slim
     steps:
       - uses: actions/checkout@v4
       - run: docker build -t local-build -f Dockerfile .
