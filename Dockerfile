@@ -1,5 +1,5 @@
 #INSTALLED debain-bullseys image
-FROM: debian:bullseye
+FROM debian:bullseye
 
 WORKDIR /app
 
