@@ -21,8 +21,9 @@ RUN apt-get update && \
     curl=7.74.0-1.3+deb11u14 \
     iputils-ping=3:20210202-1 && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    pip3 install --no-cache-dir -r requirements.txt
+    rm -rf /var/lib/apt/lists/* 
+    
+RUN  pip3 install --no-cache-dir -r requirements.txt
     
 
 #RUN pip3 install --no-cache-dir -r requirements.txt
