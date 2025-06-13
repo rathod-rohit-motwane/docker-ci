@@ -18,7 +18,15 @@ jobs:
       - name: Build Docker Image
         run: docker build -t ${{ env.IMAGE_NAME }} -f ${{ env.DOCKERFILE_PATH }} .
 
-      - name: Show Image Info
+      - name: Save as artifact
         run: |
-          docker images
-          echo "Built image: ${{ env.IMAGE_NAME }}"
+          docker save ${{ env.IMAGE_NAME }} -o image.tar
+          mkdir -p docker-images
+          mv image.tar docker-images/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docker-image
+          path: docker-images/image.tar
+          retention-days: 5  # Adjust as needed
