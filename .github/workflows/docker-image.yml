@@ -2,9 +2,20 @@ name: Build Docker Image
 
 on: [push]
 
+env:
+  IMAGE_NAME: data-logger-lastest  # Change this to your preferred image name
+  DOCKERFILE_PATH: ./Dockerfile  # Path to your Dockerfile
+  
 jobs:
-  build:
+  build-docker-image:
+    name: Build Docker Image
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: docker build -t local-build -f Dockerfile .
+      
+      - name: Show image info
+        run: |
+          docker images
+          echo "Built image       
+      
