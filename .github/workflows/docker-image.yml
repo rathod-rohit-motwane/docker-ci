@@ -1,32 +1,29 @@
-name: Build Docker Image
+name: Build and Export Docker Image
 
 on: [push]
 
-env:
-  IMAGE_NAME: data-logger-latest  # Typo fixed: 'lastest' → 'latest'
-  DOCKERFILE_PATH: ./Dockerfile
-
 jobs:
-  build-docker-image:
-    name: Build Docker Image
-    runs-on: ubuntu-latest  # GitHub-hosted runner
+  build-and-save:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Build Docker Image
-        run: docker build -t ${{ env.IMAGE_NAME }} -f ${{ env.DOCKERFILE_PATH }} .
+      - name: Build Docker image
+        run: docker build -t data-logger-latest .
 
-      - name: Save as artifact
+      - name: Save Docker image as .tar file
         run: |
-          docker save ${{ env.IMAGE_NAME }} -o image.tar
-          mkdir -p docker-images
-          mv image.tar docker-images/
+          docker save data-logger-latest -o data-logger.tar
+          gzip data-logger.tar  # Compress to save space
 
-      - name: Upload artifact
+      - name: Upload as artifact
         uses: actions/upload-artifact@v4
         with:
           name: docker-image
-          path: docker-images/image.tar
-          retention-days: 5  # Adjust as needed
+          path: data-logger.tar.gz
+          retention-days: 7  # Automatically deleted after 7 days
+
+      - name: Cleanup
+        run: docker system prune -f
