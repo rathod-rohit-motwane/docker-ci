@@ -3,19 +3,22 @@ name: Build Docker Image
 on: [push]
 
 env:
-  IMAGE_NAME: data-logger-lastest  # Change this to your preferred image name
-  DOCKERFILE_PATH: ./Dockerfile  # Path to your Dockerfile
-  
+  IMAGE_NAME: data-logger-latest  # Typo fixed: 'lastest' → 'latest'
+  DOCKERFILE_PATH: ./Dockerfile
+
 jobs:
   build-docker-image:
     name: Build Docker Image
-    runs-on:  debian:bullseye
+    runs-on: ubuntu-latest  # GitHub-hosted runner
+
     steps:
-      - uses: actions/checkout@v4
-      - run: docker build -t local-build -f Dockerfile .
-      
-      - name: Show image info
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build Docker Image
+        run: docker build -t ${{ env.IMAGE_NAME }} -f ${{ env.DOCKERFILE_PATH }} .
+
+      - name: Show Image Info
         run: |
           docker images
-          echo "Built image       
-      
+          echo "Built image: ${{ env.IMAGE_NAME }}"
