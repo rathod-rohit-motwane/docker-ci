@@ -1,5 +1,5 @@
 #INSTALLED debain-bullseys image
-FROM debian:bullseye-20250520-slim
+FROM: debian:bullseye
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ RUN apt-get update && \
     python3-pip \
     sqlite3 \
     nano \
-    libgpiod \
+    libgpiod2 \
     procps \
     curl \
     iputils-ping && \
