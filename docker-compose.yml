@@ -1,0 +1,32 @@
+version: '3'
+services:
+  ems-mod:
+    container_name: data-logger-ems_files
+    image: data-logger:latest
+    privileged: true
+    network_mode: host
+    devices:
+      - /dev/ttyUSB0
+      - /dev/ttyAMA0:/dev/ttyAMA0
+      - /dev/ttyAMA1:/dev/ttyAMA1
+      - /dev/gpiomem
+    dns:
+      - 8.8.8.8
+    logging:
+      driver: json-file
+      options:
+        max-size: "1000m"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "sh", "-c", "ping -c 1 8.8.8.8 && curl --fail --connect-timeout 5 https://prod.motware.cloud"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+    volumes:
+      - /root/.ssh/known_hosts:/root/.ssh/known_hosts
+      - /sys:/sys
+      - /run/udev:/run/udev
+    environment:
+      - TZ=Asia/Kolkata
+      - PYTHONUNBUFFERED=1
+    command: ["python3", "main.py"]
