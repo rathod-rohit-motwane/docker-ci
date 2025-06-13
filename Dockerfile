@@ -21,9 +21,8 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* 
 
- RUN pip3 install minimalmodbus PyYAML python-dotenv requests RPi.GPIO Adafruit_DHT psutil board netifaces
-
-    
+RUN pip3 install  minimalmodbus PyYAML python-dotenv requests RPi.GPIO psutil board netifaces adafruit-blinka adafruit-circuitpython-dht
+   
 
 #RUN pip3 install --no-cache-dir -r requirements.txt
 ENTRYPOINT [ "python3", "main.py" ]
