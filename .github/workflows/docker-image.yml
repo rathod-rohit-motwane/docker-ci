@@ -1,29 +1,30 @@
-name: Build and Export Docker Image
+name: Build and Save Docker Image
 
 on: [push]
 
 jobs:
   build-and-save:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t data-logger-latest .
+        run: docker build -t data-logger-ems .
 
-      - name: Save Docker image as .tar file
+      - name: Save Docker image
         run: |
-          docker save data-logger-latest -o data-logger.tar
-          gzip data-logger.tar  # Compress to save space
+          # Save image as compressed tar file
+          docker save data-logger-ems | gzip > data-logger-ems.tar.gz
+          
+          # Verify the archive
+          ls -lh data-logger-ems.tar.gz
+          echo "Image saved as data-logger-ems.tar.gz"
 
-      - name: Upload as artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: docker-image
-          path: data-logger.tar.gz
-          retention-days: 7  # Automatically deleted after 7 days
-
-      - name: Cleanup
-        run: docker system prune -f
+          path: data-logger-ems.tar.gz
+          retention-days: 7  # Keeps for 7 days (max 90)
+        
