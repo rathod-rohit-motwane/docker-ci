@@ -6,7 +6,6 @@ WORKDIR /app
 # Copy files
 COPY . /app
 
-COPY requirements.txt .
 
 # Install system dependencies like python3 and pip,nan0
 
@@ -22,8 +21,9 @@ RUN apt-get update && \
     iputils-ping=3:20210202-1 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* 
-    
-RUN  pip3 install --no-cache-dir -r requirements.txt
+
+ RUN pip3 install minimalmodbus PyYAML python-dotenv requests RPi.GPIO Adafruit_DHT psutil board netifaces
+
     
 
 #RUN pip3 install --no-cache-dir -r requirements.txt
