@@ -1,0 +1,7 @@
+minimalmodbus==2.1.1
+PyYAML==5.4.1
+python-dotenv==0.19.2
+requests==2.25.1
+RPi.GPIO==0.7.1
+Adafruit_DHT==1.4.0
+psutil==5.8.0
